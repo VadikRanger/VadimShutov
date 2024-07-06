@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="http://fe.it-academy.by/TestForm.php" method="post">
+        <fieldset>
+            <legend>Личные данные</legend>
+            <input type="text" placeholder="Фамилия">text: Только кириллица, без пробелов, длина поля 25, обязательное поле, автофокус на данном поле) <br>
+            <input type="text" placeholder="Имя">text: Только кириллица, без пробелов, длина поля 20, обязательное поле) <br>
+            <input type="text" placeholder="Отчество"> только кириллица, без пробелов, длина поля 24, обязательное поле)
+        </fieldset>
+        <fieldset>
+            <legend>Паспортные данные</legend>
+            text: Серия -только заглавные две латинские буквы с длиной 2 и максимальном количеством симвалов 2, количество букв не мение 2, <br>
+            обязательное поле <br>
+            text: Номер паспорта - только цифры с длиной 7 и максимальным количеством симвалов 7, количество цифр не мение 7 , обязательное поле <br>
+            <input type="text" placeholder="AA">
+            <input type="text" placeholder="1234567">
+        </fieldset>
+        <fieldset>
+            <legend>Дата рождения</legend>
+            <input type="text" placeholder="2000">text: Год рождения 4-е цифры<br>
+            <select> select: Месяц рождения
+                <option value="">Январь</option>
+                <option value="">Февраль</option>
+                <option value="">Март</option>
+                <option value="">Апрель</option>
+                <option value="">Май</option>
+                <option value="">Июнь</option>
+                <option value="">Июль</option>
+                <option value="">Август</option>
+                <option value="">Сентябрь</option>
+                <option value="">Октябрь</option>
+                <option value="">Ноябрь</option>
+                <option value="">Декабрь</option> 
+            </select><br>
+            <input type="number" placeholder="1234567"> number: Диапазон от 1 до 31 с шагом 1
+        </fieldset>
+        <fieldset>
+            <legend>Паспортные данные</legend>
+                <select> 
+                    <option value="">RB</option>
+                    <option value="">RF</option>
+                    <option value="">PL</option>
+                </select>
+                (Национальность - выбор одного значения из списка, обязательное поле) <br>
+                Адрес: <br>
+                <textarea></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Интересы</legend>
+            <fieldset>
+                <legend>Хобби</legend>
+                <input type="checkbox"> Рыбалка <br>
+                <input type="checkbox"> Астрономия <br>
+                <input type="checkbox"> Дайвинг <br>
+                <input type="checkbox"> Марки <br>
+            </fieldset>
+        </fieldset>
+        <fieldset>
+            <legend>Домашние животные(возможность выбора нескольких вариантов)</legend>
+                <select multiple> 
+                    <option value="">Попугаи</option>
+                    <option value="">Волнистый</option>
+                    <option value="">Ара</option>
+                    <option value="">Неразлучник</option>
+                    <option value="">Рыба</option>
+                    <option value="">Караси</option>
+                    <option value="">Окуни</option>
+                    <option value="">Осетр</option>
+                    <option value="">Птицы</option>
+                    <option value="">Стая ворон</option>
+                    <option value="">Аист</option>
+                    <option value="">Воробей</option>
+                </select>
+        </fieldset>
+        <fieldset>
+            <legend>Данные для входа и восстановления пароля</legend>
+                <input type="text" placeholder="Логин"> text: Только латиница, без пробелов, не менее 5 симвалов, длина поля 20, обязательное поле <br>
+                <input type="password" placeholder="Пароль"> password: Только латиница, без пробелов, не менее 10 симвалов, длина поляф 20, обязательное поле <br>
+                отклоючить автозаполнение
+        </fieldset>
+        <fieldset>
+            <legend>Координаты:</legend>
+                <input type="email" placeholder="введите адрес почты"> <br>
+                <input type="url" placeholder="введите адрес сайта">
+        </fieldset>
+        <fieldset>
+            <legend>Цифры</legend>
+            <input type="number"> <br>
+            <input type="range">
+        </fieldset>
+        <fieldset>
+            <legend>Кнопки упровления</legend>
+            
+        </fieldset>
+    </form>
+
+</body>
+</html>
