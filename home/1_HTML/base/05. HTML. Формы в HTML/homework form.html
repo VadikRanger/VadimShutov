@@ -29,7 +29,7 @@
             <form action="http://fe.it-academy.by/TestForm.php" method="post">
                 <fieldset>
                     <legend>Строка поиска</legend>
-                    <input type="text">
+                    <input type="text" maxlength="10">
                     <input type="submit" value="Искать"> <br>
                     <input type="radio" name="radio"> на сайте
                     <input type="radio" name="radio"> в google <br>
@@ -41,7 +41,7 @@
             <form action="http://fe.it-academy.by/TestForm.php" method="post">
                 <fieldset>
                     <legend>Строка поиска</legend>
-                    <input type="text">*
+                    <input type="text" autofocus required>* 
                     <input type="submit" value="Искать"> <br>
                     <input type="radio" name="radio"> на сайте
                     <input type="radio" name="radio"> в google <br>
@@ -59,8 +59,8 @@
             <form action="http://fe.it-academy.by/TestForm.php" method="post">
                 <fieldset>
                     <legend>Авторизируйтесь</legend>
-                    <input type="login">* Логин <br>
-                    <input type="password">* Пароль <br>
+                    <input type="login" required>* Логин <br>
+                    <input type="password" required>* Пароль <br>
                     <input type="checkbox">Оставаться в системе <br>
                     <input type="submit" value="Войти"> <br>
                     * - обязательное поле
@@ -75,6 +75,7 @@
                 <input type="radio" name="radio"> неплохо<br>
                 <input type="radio" name="radio"> хорошо<br>
                 <input type="radio" name="radio"> супер <br>
+                <input type="hidden" name="date_voite" value="2013.12.31">
                 <input type="submit" > <br>
                 Есть скрытое поле <br>name=date_voite, value="2013.12.31"
             </fieldset>
@@ -90,8 +91,8 @@
             <form action="http://fe.it-academy.by/TestForm.php" method="post">
                 <fieldset>
                     <legend>Оставте ваш отзыв</legend>
-                    <input type="text">* Имя <br>
-                    <input type="email">* e-mail <br>
+                    <input type="name" required>* Имя <br>
+                    <input type="email" required>* e-mail <br>
                     <textarea>Форма отправки</textarea> <br>
                     <input type="submit"> <br>
                     * - обязательное полеполе <br> email - с проверкой <br>метод POST
@@ -134,7 +135,7 @@
     </tr>
     <tr>
         <td>
-            <form action="http://fe.it-academy.by/TestForm.php" method="post">
+            <form enctype="multipart/form-data" action="http://fe.it-academy.by/TestForm.php" method="post">
                 <fieldset>
                     <legend>Upload</legend>
                     Файл: <br>
@@ -152,7 +153,7 @@
                     <input type="text" value="Только русские буквы"> <br>
                     Телефонный номер в формате <br>
                     +ХХХ-ХХ-ХХХХХХХ, где Х - любое числоы <br>
-                    <input type="number" placeholder="+375-29-1234567">
+                    <input type="number" placeholder="+375-29-1234567" pattern="/^\+\d{3}[-\s]?\d{3}[-\s]?\d{4}$/">
                     <input type="submit" value="Проверить">
                 </fieldset>
             </form>

@@ -11,48 +11,48 @@
 
         <fieldset>
             <legend>Личные данные</legend>
-            <input type="text" placeholder="Фамилия" autofocus required="Обязательное поле" pattern="[А-Яа-яЁё]{25}"> <br>
-            <input type="text" placeholder="Имя" required="Обязательное поле" pattern="[А-Яа-яЁё]\S[0-20]">  <br>
-            <input type="text" placeholder="Отчество" required="Обязательное поле" pattern="[А-Яа-яЁё]\S[0-24]"> 
-        </fieldset>
+            <input type="text" placeholder="Фамилия" autofocus required maxlength="25" pattern="[а-яёА-ЯЁ]\S"> <br>
+            <input type="text" placeholder="Имя" required maxlength="20" pattern="[а-яёА-ЯЁ]\S"> <br>
+            <input type="text" placeholder="Отчество" required maxlength="24" pattern="[а-яёА-ЯЁ]\S"> 
+        
 
         <fieldset>
             <legend>Паспортные данные</legend>
-            <input type="text" placeholder="AA" pattern="[A-A]{2}">
-            <input type="text" placeholder="1234567">
+            <input type="text" size="1" placeholder="AA" required maxlength="2" pattern="[A-Z]\w{2,}">
+            <input type="text" size="6" placeholder="1234567" required maxlength="7" pattern="[0-9]\d{7,}">
         </fieldset>
 
         <fieldset>
             <legend>Дата рождения</legend>
-            <input type="text" placeholder="2000">text: Год рождения 4-е цифры<br>
-            <select> select: Месяц рождения
-                <option value="">Январь</option>
-                <option value="">Февраль</option>
-                <option value="">Март</option>
-                <option value="">Апрель</option>
-                <option value="">Май</option>
-                <option value="">Июнь</option>
-                <option value="">Июль</option>
-                <option value="">Август</option>
-                <option value="">Сентябрь</option>
-                <option value="">Октябрь</option>
-                <option value="">Ноябрь</option>
-                <option value="">Декабрь</option> 
+            <input type="text" size="3" placeholder="2000" maxlength="4" pattern="[0-9]"> <br>
+            <select> 
+                <option value="January">Январь</option>
+                <option value="February">Февраль</option>
+                <option value="March">Март</option>
+                <option value="April">Апрель</option>
+                <option value="May">Май</option>
+                <option value="June">Июнь</option>
+                <option value="July">Июль</option>
+                <option value="August">Август</option>
+                <option value="September">Сентябрь</option>
+                <option value="October">Октябрь</option>
+                <option value="November">Ноябрь</option>
+                <option value="December">Декабрь</option> 
             </select><br>
-            <input type="number" placeholder="1234567"> number: Диапазон от 1 до 31 с шагом 1
+            <input type="number" step="1" min="1" max="31">
         </fieldset>
 
         <fieldset>
-            <legend>Паспортные данные</legend>
-                <select> 
+            <legend>Национальность</legend>
+                <select required> 
                     <option value="">RB</option>
                     <option value="">RF</option>
                     <option value="">PL</option>
                 </select>
-                (Национальность - выбор одного значения из списка, обязательное поле) <br>
-                Адрес: <br>
+                 <br>
                 <textarea></textarea>
         </fieldset>
+    </fieldset>
 
         <fieldset>
             <legend>Интересы</legend>
@@ -63,52 +63,56 @@
                 <input type="checkbox"> Дайвинг <br>
                 <input type="checkbox"> Марки <br>
             </fieldset>
-        </fieldset>
-
+       
         <fieldset>
-            <legend>Домашние животные(возможность выбора нескольких вариантов)</legend>
-                <select multiple> 
-                    <option value="">Попугаи</option>
-                    <option value="">Волнистый</option>
-                    <option value="">Ара</option>
-                    <option value="">Неразлучник</option>
-                    <option value="">Рыба</option>
-                    <option value="">Караси</option>
-                    <option value="">Окуни</option>
-                    <option value="">Осетр</option>
-                    <option value="">Птицы</option>
-                    <option value="">Стая ворон</option>
-                    <option value="">Аист</option>
-                    <option value="">Воробей</option>
+            <legend>Домашние животные</legend>
+                <select size="10" multiple> 
+                    <option value="option" disabled>Попугаи</option>
+                    <option value="option1">Волнистый</option>
+                    <option value="option2">Ара</option>
+                    <option value="option3">Неразлучник</option>
+                    <option value="option4" disabled>Рыба</option>
+                    <option value="option5">Караси</option>
+                    <option value="option6">Окуни</option>
+                    <option value="option7">Осетр</option>
+                    <option value="option8" disabled>Птицы</option>
+                    <option value="option9">Стая ворон</option>
+                    <option value="option10">Аист</option>
+                    <option value="option11">Воробей</option>
                 </select>
+            </fieldset>
+
         </fieldset>
 
         <fieldset>
             <legend>Данные для входа и восстановления пароля</legend>
-                <input type="text" placeholder="Логин"> text: Только латиница, без пробелов, не менее 5 симвалов, длина поля 20, обязательное поле <br>
-                <input type="password" placeholder="Пароль"> password: Только латиница, без пробелов, не менее 10 симвалов, длина поляф 20, обязательное поле <br>
-                отклоючить автозаполнение
+                <input type="text" placeholder="Логин" required maxlength="20" pattern="[а-яёА-ЯЁ]{5,}\S"> <br>
+                <input type="password" placeholder="Пароль" required maxlength="20" pattern="[а-яёА-ЯЁ]{10,}\S" autocomplete="off"> <br>
+                
         </fieldset>
 
         <fieldset>
             <legend>Координаты:</legend>
-                <input type="email" pattern="\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}" placeholder="введите адрес почты"> <br>
+                <input type="email" placeholder="введите адрес почты"> <br>
                 <input type="url" placeholder="введите адрес сайта">
         </fieldset>
 
         <fieldset>
             <legend>Цифры</legend>
-            <input type="number"> <br>
-            <input type="range">
+            <input type="number" min="-2.5" max="2.5" step="0.1"> <br>
+            <input type="range" min="1" max="101">
         </fieldset>
 
         <fieldset>
             <legend>Кнопки упровления</legend>
             <input type="submit">
-            <input type="reset">
+            <input type="reset"> <br>
+            <img src="button.jpg" alt="">
             
         </fieldset>
     </form>
+
+    
 
 </body>
 </html>
