@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+.container {
+    background-color: black;
+    color: green; 
+    width: 400px;
+    max-height: calc(1.5em * 4); 
+    overflow: auto;
+  }
+
+  body {
+    width: 350px;
+      font-family: 'Roboto', sans-serif;
+    }
+    .roman-upper {
+      list-style-type: upper-roman;
+    }
+    .roman-lower {
+      list-style-type: lower-roman;
+    }
+    </style>
+    
+</head>
+
+<body>
+
+<ol class="roman-lower"> 
+    <li>Контейнер с кодом</li>
+    <ol class="roman-lower">
+        <li>Цвет фона: чёрный</li>
+        <li>Цвет текста: зеленый</li>
+        <li>Ширина: 400px</li>
+        <li>Максимальная высота контейнера: 4-е строки</li>
+        <li>Переполнение: автоматическое</li>
+    </ol class="roman-lower">
+    <li>Список</li>
+    <ol class="roman-lower">
+        <li>Ширина 350px</li>
+        <li>Тип списка: римские цифры</li>
+        <li>Тип вложенного списка: римские нижний регистер цифры</li>
+    </ol>
+</ol>
+
+<div class="container">
+    #!/usr/bin/env python <br>
+    print 'hallo. Iam a python proqram.' <br>
+    name = raw_input("What is your name&") <br>
+    print "Hallo there, " + name + "!"
+  </div>
+    
+</body>
+</html>
