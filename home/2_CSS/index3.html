@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+    .blok{
+        width: 15em;
+        background-color: brown;
+        float: left;
+
+    }
+    .article{
+        background-color: green;
+        margin-bottom: .2em;
+        margin-left: 240px;
+    }
+
+    .wrap{
+        background-color: yellow;
+    }
+
+    .footer{
+        background-color: blue;
+        clear: both;
+    }
+
+    .rasp{
+        clear: both;
+        background-color: blueviolet;
+    }
+
+    .img{
+        float: right;
+    }
+    
+
+  
+</style>
+
+</head>
+<body>
+
+    <div class="blok">
+
+        <h4>Блок навигации</h4>
+            <ul>
+                <li>Ширина 15em</li>
+                <li>Должен присутствовать цвет фона</li>
+                <li>Распологается слева</li>
+                <li>Блок навигации наполните контентом достаточным,
+                    чтобы по высоте он начинал захватывать вторую статью,
+                    как показано в данном примере</li>
+            </ul>
+
+    </div>
+    
+    <div class="wrap">
+
+    <div class="article">
+
+            <h4>Статья 1</h4>
+
+                <p>Размер Блока: <br>
+                   Занимает всю доступную ширину <br>
+                   Должен присутствовать цвет фона <br>
+                   Во всех "статьях" сделайте отступ снизу от соседей
+                   равным .2em, при помощи свойства margin-bottom.
+                </p>
+
+    </div>
+
+    <div class="article">
+
+        <h4>Статья 2</h4>
+
+            <p>Размер Блока: <br>
+                Занимает всю доступную ширину <br>
+                Должен присутствовать цвет фона <br>
+                Во всех "статьях" сделайте отступ снизу от соседей
+                равным .2em, при помощи свойства margin-bottom.
+                Картинка вставлена при помощи тега, плавание организовано по 
+                правому краю внутри данной статьи для этой картинки.
+                <img src="img/mail.jpg" class="img">
+            </p>
+                <div class="rasp"></div>
+
+        </div>
+
+    </div>
+   
+    <div class="footer">Нижний блок, подвал. Занимает всю доступную
+         шириную Высота определяется помещённым внутрь контеном.</div>
+
+</body>
+</html>
