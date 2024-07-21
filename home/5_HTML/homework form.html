@@ -18,7 +18,7 @@
     </ul>
 
     
-<table width="750" border="">
+<table width="700">
 
     <tr>
         <td>Простая форма поиска с вариантами:</td>
@@ -26,26 +26,26 @@
     </tr>
     <tr>
         <td>
-            <form action="http://fe.it-academy.by/TestForm.php" method="post">
+            <form action="http://fe.it-academy.by/TestForm.php" method="post" name="standard_search">
                 <fieldset>
                     <legend>Строка поиска</legend>
-                    <input type="text" maxlength="10">
+                    <input type="text" name="search" maxlength="10">
                     <input type="submit" value="Искать"> <br>
-                    <input type="radio" name="radio"> на сайте
-                    <input type="radio" name="radio"> в google <br>
-                    Длина запроса не более 10 символов
+                    <label><input type="radio" id="radio-search" name="radio-search"> на сайте </label>
+                    <label><input type="radio" id="radio-search1" name="radio-search1"> в google </label> <br>
+                    <label><em>Длина запроса не более 10 символов</em></label>
                 </fieldset>
             </form>
         </td>
         <td>
-            <form action="http://fe.it-academy.by/TestForm.php" method="post">
+            <form action="http://fe.it-academy.by/TestForm.php" method="post" name="standard_search1">
                 <fieldset>
                     <legend>Строка поиска</legend>
-                    <input type="text" autofocus required>* 
+                    <input type="text" name="search" autofocus required>* 
                     <input type="submit" value="Искать"> <br>
-                    <input type="radio" name="radio"> на сайте
-                    <input type="radio" name="radio"> в google <br>
-                    * - обязательное поле<br>Автофокус в поле поиска
+                    <label><input type="radio" name="radio" value="check1"> на сайте</label>
+                    <label><input type="radio" name="radio" value="check2"> в google <br></label>
+                    <label><em>* - обязательное поле<br>Автофокус в поле поиска</em></label>
                 </fieldset>
             </form>
         </td>
@@ -56,27 +56,27 @@
     </tr>
     <tr>
         <td>
-            <form action="http://fe.it-academy.by/TestForm.php" method="post">
+            <form action="http://fe.it-academy.by/TestForm.php" method="post" name="authorization_form">
                 <fieldset>
                     <legend>Авторизируйтесь</legend>
-                    <input type="login" required>* Логин <br>
-                    <input type="password" required>* Пароль <br>
-                    <input type="checkbox" name="check1">Оставаться в системе <br>
+                    <input type="login" name="login" id="login" required><label for="login">* Логин</label> <br>
+                    <input type="password" name="password" id="password" required><label for="password">* Пароль</label> <br>
+                    <input type="checkbox" name="stay" id="stay"><label for="stay">Оставаться в системе</label> <br>
                     <input type="submit" value="Войти"> <br>
-                    * - обязательное поле
+                    <label><em>* - обязательное поле</em></label>
                 </fieldset>
             </form>
         </td>
         <td> 
-            <form action="http://fe.it-academy.by/TestForm.php" method="post">
+            <form action="http://fe.it-academy.by/TestForm.php" method="post" name="survey">
             <fieldset>
-                <legend>Опрос(голосование):</legend>
-                <input type="radio" name="radio"> ничего <br>
-                <input type="radio" name="radio"> неплохо<br>
-                <input type="radio" name="radio"> хорошо<br>
-                <input type="radio" name="radio"> супер <br>
+                <legend>Как вам?:</legend>
+                <label><input type="radio" name="how" value="nothing"> ничего</label> <br>
+                <label><input type="radio" name="how" value="not_bad"> неплохо</label><br>
+                <label><input type="radio" name="how" value="good"> хорошо</label><br>
+                <label><input type="radio" name="how" value="super"> супер</label><br>
                 <input type="hidden" name="date_voite" value="2013.12.31">
-                <input type="submit" > <br>
+                <input type="submit" value="Отправить"> <br>
                 Есть скрытое поле <br>name=date_voite, value="2013.12.31"
             </fieldset>
         </form>
@@ -88,40 +88,44 @@
     </tr>
     <tr>
         <td>
-            <form action="http://fe.it-academy.by/TestForm.php" method="post">
+            <form action="http://fe.it-academy.by/TestForm.php" method="post" name="testimonial">
                 <fieldset>
                     <legend>Оставте ваш отзыв</legend>
-                    <input type="name" required>* Имя <br>
-                    <input type="email" required>* e-mail <br>
-                    <textarea>Форма отправки</textarea> <br>
-                    <input type="submit"> <br>
-                    * - обязательное полеполе <br> email - с проверкой <br>метод POST
+                    <input type="name" name="name1" id="name1" required><label for="name1">* Имя</label> <br>
+                    <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><label for="email">* e-mail</label> <br>
+                    <textarea name="form" id="form">Форма отправки</textarea> <br>
+                    <input type="submit" value="Отправить"> <br>
+                   <label><em>* - обязательное полеполе <br> email - с проверкой <br>метод POST</em></label>
                 </fieldset>
             </form>
         </td>
         <td>
-            <form action="http://fe.it-academy.by/TestForm.php" method="post">
+            <form action="http://fe.it-academy.by/TestForm.php" method="post" name="dropout">
                 <fieldset>
-                    <legend>Оставте ваш отзыв</legend>
-                     <select>
-                        <option><h4>Города РБ</h4></option>
-                        <option>Минск</option>
-                        <option>Брест</option>
-                        <option>Гродно</option>
-                        <option>Города РФ</option>
-                        <option>Москва</option>
-                        <option>Тула</option>
-                        <option>Магадан</option>
+                    <legend>Города РБ</legend>
+                     <select name="dropout1" id="dropout1">
+                        <optgroup label="Города РБ">
+                        <option value="Minsk">Минск</option>
+                        <option value="Brest">Брест</option>
+                        <option value="Grodno">Гродно</option>
+                        </optgroup>
+                        <optgroup label="Города РФ">
+                        <option value="Moscow">Москва</option>
+                        <option value="Tula">Тула</option>
+                        <option value="Magadan">Магадан</option>
+                        </optgroup>
                      </select>
-                     <select multiple>
-                        <option><h4>Города РБ</h4></option>
-                        <option>Минск</option>
-                        <option>Брест</option>
-                        <option>Гродно</option>
-                        <option>Города РФ</option>
-                        <option>Москва</option>
-                        <option>Тула</option>
-                        <option>Магадан</option>
+                     <select name="dropout2" id="dropout2" size="8">
+                        <optgroup label="Города РБ">
+                        <option value="Minsk">Минск</option>
+                        <option value="Brest">Брест</option>
+                        <option value="Grodno">Гродно</option>
+                        </optgroup>
+                        <optgroup label="Города РФ">
+                        <option value="Moscow">Москва</option>
+                        <option value="Tula">Тула</option>
+                        <option value="Magadan">Магадан</option>
+                        </optgroup>
                      </select>
                      <input type="submit" value="OK">
                 </fieldset>
@@ -135,25 +139,24 @@
     </tr>
     <tr>
         <td>
-            <form enctype="multipart/form-data" action="http://fe.it-academy.by/TestForm.php" method="post">
+            <form enctype="multipart/form-data" action="http://fe.it-academy.by/TestForm.php" method="post" name="download">
                 <fieldset>
                     <legend>Upload</legend>
-                    Файл: <br>
-                    <input type="file"> <br>
-                    Срок хранения (года): <br>
-                    <input type="number"> 
-                    <input type="submit" value="загрузить">
+                    <label>Файл:</label> <br>
+                    <input type="file" name="for_the_file"> <br>
+                    <label for="in_effect">Срок хранения (года):</label> <br>
+                    <input type="number" id="in_effect" name="in_effect"> 
+                    <input type="submit" value="Загрузить">
                 </fieldset>
             </form>
         </td>
         <td>
-            <form action="http://fe.it-academy.by/TestForm.php" method="post">
+            <form action="http://fe.it-academy.by/TestForm.php" method="post" name="Validation">
                 <fieldset>
                     <legend>Валидация данных HTML5:</legend>
-                    <input type="text" value="Только русские буквы"> <br>
-                    Телефонный номер в формате <br>
-                    +ХХХ-ХХ-ХХХХХХХ, где Х - любое числоы <br>
-                    <input type="number" placeholder="+375-29-1234567" pattern="/^\+\d{3}[-\s]?\d{3}[-\s]?\d{4}$/">
+                    <input type="text" name="ru" pattern="[а-яА-Я]" value="Только русские буквы"> <br>
+                    <label for="number"><em>Телефонный номер в формате<br>+ХХХ-ХХ-ХХХХХХХ, где Х - любое числоы <br></em></label> 
+                    <input type="number" placeholder="+375-29-1234567" pattern="/^\+\d{3}[-\s]?\d{3}[-\s]?\d{4}$/"> <br>
                     <input type="submit" value="Проверить">
                 </fieldset>
             </form>

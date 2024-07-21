@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 50px); /* Задаем 4 колонки по 50px */
+            gap: 5px; /* Расстояние между элементами */
+        }
+
+        .container span {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .container span:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+        .container span:nth-child(even) {
+            background-color: darkgray;
+        }
+
+        .container span:nth-child(4n+1),
+        .container span:nth-child(4n+2) {
+            background-color: lightgray;
+        }
+
+        .container span:nth-child(4n+3),
+        .container span:nth-child(4n+4) {
+            background-color: darkgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+        <span>11</span>
+        <span>12</span>
+        <span>13</span>
+        <span>14</span>
+        <span>15</span>
+        <span>16</span>
+    </div>
+</body>
+</html>
