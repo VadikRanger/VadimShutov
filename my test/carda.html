@@ -1,26 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-<style> 
-
-div{
-    width: 53px;
-    height: 59px;
-    background-image: url("img/cards.7e0a18f0.png");
-    background-color: green;
-    background-repeat: no-repeat ;
-    background-position: -121px -10px ;
-}
- </style>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css">
+    <style>
+        .content {
+            margin-top: 20px;
+        }
+        .sidebar {
+            background-color: #f0f8ff;
+            padding: 20px;
+        }
+        .sidebar a {
+            color: #00f;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        .sidebar h2, .sidebar h3 {
+            color: #00f;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
+    
+<div class="grid-container">
+    <div class="cell"><h1>HOW-TO: Программа на Python, Часть 1</h1></div>
+    <div class="grid-x grid-padding-x">
+        <div class="cell medium-8">
+            <div class="cell"><h3>HOW-TO: Программа на Python,<br> Часть 1</h3></div>
+            <div class="content">
+                <p>Из множества существующих языков программирования Python — один из самых лёгких и изучаемых. Он создан в конце 80-х годов ХХ века, и с тех пор он сильно изменился. Хотя Python входит в состав большинства дистрибутивов Linux, на него часто не обращают внимания при выборе языка для изучения. В этой статье мы рассмотрим создание консольных приложений, а в следующей — программирование графических интерфейсов (GUI). Давайте создадим простую программу прямо сейчас.</p>
+                <h2>Наша первая программа</h2>
+                <p>Наберите код в текстовом редакторе (например, в gedit). Потом мы разберёмся, что делает каждая строка и пойдём дальше.</p>
+                <pre>
+#!/usr/bin/env python
+print "Hello. I am a python program."
+name = raw_input("What is your name?")
+print "Hello there, " + name + "!"
+                </pre>
+                <p>Это всё. Сохраните файл как hello.py в любом месте. Я предлагаю сохранить его в папке <strong>python_examples</strong> в домашнем каталоге. Этот пример показывает, как просто написать программу на Python. Для запуска программы нужно сделать её файл исполняемым. Для этого введите в терминале</p>
+                <pre>chmod +x hello.py</pre>
+                <p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
+                <pre>
+greg@earth:~/python_examples$ ./hello.py
+Hello. I am a python program.
+What is your name? Ford Burghi
+Hello there, Ford Burghi
+greg@earth:~/python_examples$
+                </pre>
+                <p>Вот и всё.</p>
+                <h2>Пример цикла For</h2>
+                <p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый редактор и наберите следующую программу:</p>
+                <pre>
+#!/usr/bin/env python
+for ctr in range(0,10):
+    print ctr
+                </pre>
+                <p><em>Не забудьте поставить символ табуляции перед строкой <code>print ctr</code>. Это важно. В Python для указания на блоки кода используются не круглые <code>()</code> и фигурные <code>{}</code> скобки как в других языках программирования, а отступы.</em></p>
+            </div>
+        </div>
+        <div class="cell medium-4 sidebar">
+            <h2>Содержание</h2>
+            <ul>
+                <li><a href="#">Наша первая программа</a></li>
+                <li><a href="#">Пример цикла For</a></li>
+            </ul>
+            <h3>Программа на Python — часть 1</h3>
+            <ul>
+                <li><a href="#">Программа на Python — часть 1</a></li>
+                <li><a href="#">Программа на Python — часть 2</a></li>
+                <li><a href="#">Программа на Python — часть 3</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-<div></div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+</script>
 
 </body>
+</html>
 </html>

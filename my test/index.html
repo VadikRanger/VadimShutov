@@ -1,46 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HOW-TO: Программа на Python, Часть 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            border-right: 1px solid #e6e6e6;
+            padding-right: 20px;
+        }
+        .content {
+            padding-left: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .sidebar h3, .sidebar ul, .sidebar a {
+            color: #0078e7;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+        }
+        .sidebar ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        .sidebar a {
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        pre {
+            background: #f9f9f9;
+            border: 1px solid #e1e1e1;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+        }
+    </style>
 </head>
 <body>
-    <!-- <table width="100%" border="1"> 
-         <tr>
-           <th colspan="3">text</th>
-        </tr>
-        <tr>
-           <th>text</th>
-           <th>text</th>
-           <th>text</th>
-        </tr>
-        <tr>
-           <th>text</th>
-           <th>text</th>
-           <th>text</th>
-        </tr> -->
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="large-3 medium-4 cell sidebar">
+                <h3>Содержание</h3>
+                <ul>
+                    <li><a href="#">Наша первая программа</a></li>
+                    <li><a href="#">Пример цикла For</a></li>
+                </ul>
+            </div>
+            <div class="large-9 medium-8 cell content">
+                <h1>HOW-TO: Программа на Python, Часть 1</h1>
+                <p>Из множества существующих языков программирования Python — один из самых лёгких и изучаемых. Он создан в конце 80-х годов XX века, и с тех пор он сильно изменился. Хотя Python входит в состав большинства дистрибутивов Linux, на него часто не обращают внимания при выборе языка для изучения. В этой статье мы рассмотрим создание консольных приложений, а в следующей — программирование графических интерфейсов (GUI). Давайте создадим простую программу прямо сейчас.</p>
+                
+                <h2>Наша первая программа</h2>
+                <a href="#">К содержанию</a>
+                <p>Наберите код в текстовом редакторе (например, в gedit). Потом мы разберёмся, что делает каждая строка и пойдём дальше.</p>
+                <pre><code>
+#!/usr/bin/env python
+print "Hello. I am a python program."
+name = raw_input("What is your name?")
+print "Hello there, " + name + "!"
+                </code></pre>
+                <p>Это всё. Сохраните файл как <code>hello.py</code> в любом месте. Я предлагаю сохранить его в папке <code>python_examples</code> в домашнем каталоге. Этот пример показывает, как просто написать программу на Python. Для запуска программы нужно сделать её файл исполняемым. Для этого введите в терминале</p>
+                <pre><code>chmod +x hello.py</code></pre>
+                <p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
+                <pre><code>
+greg@earth:~/python_examples$ ./hello.py
+Hello. I am a python program.
+What is your name? Fred Burghol
+Hello there, Fred Burghol
+greg@earth:~/python_examples$
+                </code></pre>
+                <p>Вот и всё.</p>
 
-        <table width="100%" border="1"> 
-            <tr>
-              <th>text</th>
-              <th>text</th>
-              <th>text</th>
-           </tr>
-           <tr>
-              <th>text</th>
-              <th>text</th>
-              <th>text</th>
-           </tr>
-           <tr>
-              <th>text</th>
-              <th>text</th>
-              <th>text</th>
-           </tr>
-
-
-
-    </table>
-    
+                <h2>Пример цикла For</h2>
+                <a href="#">К содержанию</a>
+                <p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый редактор и наберите следующую программу:</p>
+                <pre><code>
+#!/usr/bin/env python
+for ctr in range(0,10):
+    print ctr
+                </code></pre>
+                <p><em>Не забудьте поставить символ табуляции перед строкой <code>print ctr</code>. Это важно. В Python для указания на блоки кода используются не круглые <code>()</code> и фигурные <code>{}</code> скобки как в других языках программирования, а отступы.</em></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
 </body>
 </html>
